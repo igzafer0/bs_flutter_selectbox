@@ -238,7 +238,8 @@ class _BsSelectBoxState extends State<BsSelectBox> with SingleTickerProviderStat
       () => updateState(() => isOpen = false),
     );
 
-    Overlay.of(context)!.insert(overlayEntry.overlayEntry);
+    Overlay.of(context).insert(overlayEntry.overlayEntry);
+
     FocusScope.of(context).requestFocus(_focusNodeKeyboard);
 
     if (widget.serverSide != null) api();
